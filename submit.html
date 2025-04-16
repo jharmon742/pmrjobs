@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submit a Job | PM&R Jobs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+    .container {
+      max-width: 700px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #004b6b;
+      text-align: center;
+    }
+    form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #004b6b;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Submit a PM&R Job Listing</h1>
+    <form name="submit-job-form" method="POST" data-netlify="true">
+      <label>Job Title<input type="text" name="job_title" required></label>
+      <label>Company Name<input type="text" name="company_name" required></label>
+      <label>Location (City, State)<input type="text" name="location" required></label>
+      <label>Subspecialty
+        <select name="subspecialty">
+          <option value="">Select</option>
+          <option>General Rehab</option>
+          <option>SCI</option>
+          <option>TBI</option>
+          <option>Peds PM&R</option>
+          <option>Pain</option>
+          <option>Sports</option>
+          <option>Sports and Spine</option>
+          <option>Cancer Rehab</option>
+        </select>
+      </label>
+      <label>Job Type
+        <select name="job_type">
+          <option value="">Select</option>
+          <option>Full Time</option>
+          <option>Part Time</option>
+          <option>Locum Tenens</option>
+        </select>
+      </label>
+      <label>Setting<input type="text" name="setting"></label>
+      <label>Salary<input type="text" name="salary"></label>
+      <label>Insurance Benefits<input type="text" name="insurance"></label>
+      <label>Malpractice Info<input type="text" name="malpractice"></label>
+      <label>CME<input type="text" name="cme"></label>
+      <label>Time Off<input type="text" name="time_off"></label>
+      <label>Expected Hours<input type="text" name="hours"></label>
+      <label>On Call Requirements<input type="text" name="on_call"></label>
+      <label>Contact Info (Name + Email)<input type="text" name="contact"></label>
+      <button type="submit">Submit Job</button>
+    </form>
+  </div>
+</body>
+</html>
