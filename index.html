@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PM&R Job Board</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #004b6b;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .search-bar input, .search-bar select {
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+      margin-bottom: 1rem;
+      width: calc(33% - 1rem);
+    }
+    .job {
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 0;
+    }
+    .job h3 {
+      margin: 0 0 0.5rem;
+    }
+    .job p {
+      margin: 0.3rem 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PM&R Job Board</h1>
+    <p>Find attending, fellowship, and locum tenens PM&R jobs across the U.S.</p>
+  </header>
+  <div class="container">
+    <div class="search-bar">
+      <input type="text" placeholder="Search by state or city...">
+      <select>
+        <option value="">Setting</option>
+        <option value="Academic">Academic</option>
+        <option value="Private">Private</option>
+      </select>
+      <select>
+        <option value="">Subspecialty</option>
+        <option value="Pain Medicine">Pain Medicine</option>
+        <option value="Brain Injury">Brain Injury</option>
+        <option value="Spinal Cord Injury">Spinal Cord Injury</option>
+        <option value="General Rehab">General Rehab</option>
+      </select>
+    </div>
+
+    <div class="job">
+      <h3>Pain Medicine Attending - Outpatient | Houston, TX</h3>
+      <p><strong>Setting:</strong> Private Practice</p>
+      <p><strong>Procedures:</strong> Injections, EMG, Ultrasound</p>
+      <p><strong>Visa Sponsorship:</strong> Yes | <strong>Salary:</strong> $325,000+</p>
+    </div>
+
+    <div class="job">
+      <h3>Academic PM&R Attending - TBI Focus | Boston, MA</h3>
+      <p><strong>Setting:</strong> Academic</p>
+      <p><strong>Procedures:</strong> None Required</p>
+      <p><strong>Visa Sponsorship:</strong> No | <strong>Salary:</strong> $210,000 - $260,000</p>
+    </div>
+
+    <div class="job">
+      <h3>Locum Tenens PM&R - General Rehab | Remote Options</h3>
+      <p><strong>Setting:</strong> Various</p>
+      <p><strong>Procedures:</strong> General Coverage</p>
+      <p><strong>Visa Sponsorship:</strong> Not Applicable | <strong>Rate:</strong> $180/hr</p>
+    </div>
+  </div>
+</body>
+</html>
