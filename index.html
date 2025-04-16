@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,17 +18,17 @@
       text-align: center;
     }
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto;
       background: white;
       padding: 2rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    .search-bar input, .search-bar select {
+    .filters input, .filters select {
       padding: 0.5rem;
       margin-right: 0.5rem;
       margin-bottom: 1rem;
-      width: calc(33% - 1rem);
+      width: calc(25% - 1rem);
     }
     .job {
       border-bottom: 1px solid #ddd;
@@ -41,6 +40,15 @@
     .job p {
       margin: 0.3rem 0;
     }
+    .job a {
+      color: #004b6b;
+      text-decoration: none;
+    }
+    .submit-job {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #f0f0f0;
+    }
   </style>
 </head>
 <body>
@@ -48,43 +56,67 @@
     <h1>PM&R Job Board</h1>
     <p>Find attending, fellowship, and locum tenens PM&R jobs across the U.S.</p>
   </header>
+
   <div class="container">
-    <div class="search-bar">
-      <input type="text" placeholder="Search by state or city...">
-      <select>
-        <option value="">Setting</option>
-        <option value="Academic">Academic</option>
-        <option value="Private">Private</option>
-      </select>
+    <div class="filters">
+      <input type="text" placeholder="Search by state...">
       <select>
         <option value="">Subspecialty</option>
-        <option value="Pain Medicine">Pain Medicine</option>
-        <option value="Brain Injury">Brain Injury</option>
-        <option value="Spinal Cord Injury">Spinal Cord Injury</option>
         <option value="General Rehab">General Rehab</option>
+        <option value="SCI">Spinal Cord Injury</option>
+        <option value="TBI">Traumatic Brain Injury</option>
+        <option value="Peds PM&R">Peds PM&R</option>
+        <option value="Pain">Pain</option>
+        <option value="Sports">Sports</option>
+        <option value="Sports and Spine">Sports and Spine</option>
+        <option value="Cancer Rehab">Cancer Rehab</option>
+      </select>
+      <select>
+        <option value="">Job Type</option>
+        <option value="Full Time">Full Time</option>
+        <option value="Part Time">Part Time</option>
+        <option value="Locum Tenens">Locum Tenens</option>
       </select>
     </div>
 
     <div class="job">
-      <h3>Pain Medicine Attending - Outpatient | Houston, TX</h3>
+      <h3><a href="#">Outpatient MSK/Spine - PM&R | Charlotte, NC</a></h3>
+      <p><strong>Subspecialty:</strong> Sports and Spine</p>
+      <p><strong>Type:</strong> Full Time</p>
+      <p><strong>Company:</strong> OrthoHealth Charlotte</p>
       <p><strong>Setting:</strong> Private Practice</p>
-      <p><strong>Procedures:</strong> Injections, EMG, Ultrasound</p>
-      <p><strong>Visa Sponsorship:</strong> Yes | <strong>Salary:</strong> $325,000+</p>
+      <p><strong>Salary:</strong> $280,000+</p>
+      <p><strong>Insurance:</strong> Health, Dental, Vision</p>
+      <p><strong>Malpractice:</strong> Covered</p>
+      <p><strong>CME:</strong> $3,000/yr + 5 days</p>
+      <p><strong>Time Off:</strong> 4 weeks PTO</p>
+      <p><strong>Expected Hours:</strong> 40 hrs/week</p>
+      <p><strong>On Call:</strong> None</p>
+      <p><strong>Contact:</strong> Dr. Jane Doe | janedoe@orthohealth.com</p>
     </div>
 
-    <div class="job">
-      <h3>Academic PM&R Attending - TBI Focus | Boston, MA</h3>
-      <p><strong>Setting:</strong> Academic</p>
-      <p><strong>Procedures:</strong> None Required</p>
-      <p><strong>Visa Sponsorship:</strong> No | <strong>Salary:</strong> $210,000 - $260,000</p>
-    </div>
-
-    <div class="job">
-      <h3>Locum Tenens PM&R - General Rehab | Remote Options</h3>
-      <p><strong>Setting:</strong> Various</p>
-      <p><strong>Procedures:</strong> General Coverage</p>
-      <p><strong>Visa Sponsorship:</strong> Not Applicable | <strong>Rate:</strong> $180/hr</p>
+    <div class="submit-job">
+      <h3>Post a Job</h3>
+      <p>To submit a job posting, please email <strong>mypmrjobs@gmail.com</strong> with the following info:</p>
+      <ul>
+        <li>Job Title</li>
+        <li>Company Name</li>
+        <li>Location (City, State)</li>
+        <li>Subspecialty</li>
+        <li>Job Type (Full-time, Part-time, Locums)</li>
+        <li>Setting (Academic, Private, etc.)</li>
+        <li>Salary</li>
+        <li>Insurance Benefits</li>
+        <li>Malpractice Info</li>
+        <li>CME</li>
+        <li>Time Off</li>
+        <li>Expected Hours</li>
+        <li>On Call Requirements</li>
+        <li>Contact Info (Name + Email)</li>
+      </ul>
+      <p>We’ll review and post your listing within 24-48 hours.</p>
     </div>
   </div>
 </body>
 </html>
+
