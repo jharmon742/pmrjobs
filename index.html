@@ -44,10 +44,27 @@
       color: #004b6b;
       text-decoration: none;
     }
-    .submit-job {
+    .submit-job, .job-detail-form {
       margin-top: 2rem;
       padding: 1rem;
       background-color: #f0f0f0;
+    }
+    form label {
+      display: block;
+      margin-top: 1rem;
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+    }
+    form button {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #004b6b;
+      color: white;
+      border: none;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -80,7 +97,14 @@
     </div>
 
     <div class="job">
-      <h3><a href="#">Outpatient MSK/Spine - PM&R | Charlotte, NC</a></h3>
+      <h3><a href="#job1">Outpatient MSK/Spine - PM&R | Charlotte, NC</a></h3>
+      <p><strong>Subspecialty:</strong> Sports and Spine</p>
+      <p><strong>Type:</strong> Full Time</p>
+      <p><strong>Company:</strong> OrthoHealth Charlotte</p>
+    </div>
+
+    <div id="job1" class="job-detail-form">
+      <h3>Job Details: Outpatient MSK/Spine - PM&R | Charlotte, NC</h3>
       <p><strong>Subspecialty:</strong> Sports and Spine</p>
       <p><strong>Type:</strong> Full Time</p>
       <p><strong>Company:</strong> OrthoHealth Charlotte</p>
@@ -96,28 +120,44 @@
     </div>
 
     <div class="submit-job">
-      <h3>Post a Job</h3>
-      <p>To submit a job posting, please email <strong>mypmrjobs@gmail.com</strong> with the following info:</p>
-      <ul>
-        <li>Job Title</li>
-        <li>Company Name</li>
-        <li>Location (City, State)</li>
-        <li>Subspecialty</li>
-        <li>Job Type (Full-time, Part-time, Locums)</li>
-        <li>Setting (Academic, Private, etc.)</li>
-        <li>Salary</li>
-        <li>Insurance Benefits</li>
-        <li>Malpractice Info</li>
-        <li>CME</li>
-        <li>Time Off</li>
-        <li>Expected Hours</li>
-        <li>On Call Requirements</li>
-        <li>Contact Info (Name + Email)</li>
-      </ul>
-      <p>We’ll review and post your listing within 24-48 hours.</p>
+      <h3>Submit a Job Listing</h3>
+      <form name="submit-job-form" method="POST" data-netlify="true">
+        <label>Job Title<input type="text" name="job_title" required></label>
+        <label>Company Name<input type="text" name="company_name" required></label>
+        <label>Location (City, State)<input type="text" name="location" required></label>
+        <label>Subspecialty
+          <select name="subspecialty">
+            <option value="">Select</option>
+            <option>General Rehab</option>
+            <option>SCI</option>
+            <option>TBI</option>
+            <option>Peds PM&R</option>
+            <option>Pain</option>
+            <option>Sports</option>
+            <option>Sports and Spine</option>
+            <option>Cancer Rehab</option>
+          </select>
+        </label>
+        <label>Job Type
+          <select name="job_type">
+            <option value="">Select</option>
+            <option>Full Time</option>
+            <option>Part Time</option>
+            <option>Locum Tenens</option>
+          </select>
+        </label>
+        <label>Setting<input type="text" name="setting"></label>
+        <label>Salary<input type="text" name="salary"></label>
+        <label>Insurance Benefits<input type="text" name="insurance"></label>
+        <label>Malpractice Info<input type="text" name="malpractice"></label>
+        <label>CME<input type="text" name="cme"></label>
+        <label>Time Off<input type="text" name="time_off"></label>
+        <label>Expected Hours<input type="text" name="hours"></label>
+        <label>On Call Requirements<input type="text" name="on_call"></label>
+        <label>Contact Info (Name + Email)<input type="text" name="contact"></label>
+        <button type="submit">Submit Job</button>
+      </form>
     </div>
   </div>
 </body>
 </html>
-
-
