@@ -52,9 +52,12 @@
   <div class="container">
     <h1>Submit a PM&R Job Listing</h1>
     <form name="submit-job-form" method="POST" data-netlify="true" action="/success.html">
+      <input type="hidden" name="form-name" value="submit-job-form">
+
       <label>Job Title<input type="text" name="job_title"></label>
       <label>Company Name<input type="text" name="company_name"></label>
       <label>Location (City, State)<input type="text" name="location"></label>
+      
       <label>Subspecialty
         <select name="subspecialty">
           <option value="">Select</option>
@@ -68,6 +71,7 @@
           <option>Cancer Rehab</option>
         </select>
       </label>
+
       <label>Job Type
         <select name="job_type">
           <option value="">Select</option>
@@ -76,6 +80,7 @@
           <option>Locum Tenens</option>
         </select>
       </label>
+
       <label>Setting<input type="text" name="setting"></label>
       <label>Salary<input type="text" name="salary"></label>
       <label>Insurance Benefits<input type="text" name="insurance"></label>
