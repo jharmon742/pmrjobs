@@ -49,10 +49,10 @@
 <body>
   <div class="container">
     <h1>Submit a PM&R Job Listing</h1>
-    <form name="submit-job-form" method="POST" data-netlify="true">
-      <label>Job Title<input type="text" name="job_title" required></label>
-      <label>Company Name<input type="text" name="company_name" required></label>
-      <label>Location (City, State)<input type="text" name="location" required></label>
+    <form name="submit-job-form" method="POST" data-netlify="true" action="success.html">
+      <label>Job Title<input type="text" name="job_title"></label>
+      <label>Company Name<input type="text" name="company_name"></label>
+      <label>Location (City, State)<input type="text" name="location"></label>
       <label>Subspecialty
         <select name="subspecialty">
           <option value="">Select</option>
@@ -81,10 +81,5 @@
       <label>CME<input type="text" name="cme"></label>
       <label>Time Off<input type="text" name="time_off"></label>
       <label>Expected Hours<input type="text" name="hours"></label>
-      <label>On Call Requirements<input type="text" name="on_call"></label>
-      <label>Contact Info (Name + Email)<input type="text" name="contact"></label>
-      <button type="submit">Submit Job</button>
-    </form>
-  </div>
-</body>
-</html>
+      <label
+
