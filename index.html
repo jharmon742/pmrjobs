@@ -44,27 +44,19 @@
       color: #004b6b;
       text-decoration: none;
     }
-    .submit-job, .job-detail-form {
+    .submit-job-link {
       margin-top: 2rem;
-      padding: 1rem;
-      background-color: #f0f0f0;
+      text-align: center;
     }
-    form label {
-      display: block;
-      margin-top: 1rem;
-    }
-    form input, form textarea, form select {
-      width: 100%;
-      padding: 0.5rem;
-      margin-top: 0.25rem;
-    }
-    form button {
+    .submit-job-link a {
+      display: inline-block;
       margin-top: 1rem;
       padding: 0.75rem 1.5rem;
       background-color: #004b6b;
       color: white;
-      border: none;
-      cursor: pointer;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
     }
   </style>
 </head>
@@ -119,45 +111,11 @@
       <p><strong>Contact:</strong> Dr. Jane Doe | janedoe@orthohealth.com</p>
     </div>
 
-    <div class="submit-job">
-      <h3>Submit a Job Listing</h3>
-      <form name="submit-job-form" method="POST" data-netlify="true">
-        <label>Job Title<input type="text" name="job_title" required></label>
-        <label>Company Name<input type="text" name="company_name" required></label>
-        <label>Location (City, State)<input type="text" name="location" required></label>
-        <label>Subspecialty
-          <select name="subspecialty">
-            <option value="">Select</option>
-            <option>General Rehab</option>
-            <option>SCI</option>
-            <option>TBI</option>
-            <option>Peds PM&R</option>
-            <option>Pain</option>
-            <option>Sports</option>
-            <option>Sports and Spine</option>
-            <option>Cancer Rehab</option>
-          </select>
-        </label>
-        <label>Job Type
-          <select name="job_type">
-            <option value="">Select</option>
-            <option>Full Time</option>
-            <option>Part Time</option>
-            <option>Locum Tenens</option>
-          </select>
-        </label>
-        <label>Setting<input type="text" name="setting"></label>
-        <label>Salary<input type="text" name="salary"></label>
-        <label>Insurance Benefits<input type="text" name="insurance"></label>
-        <label>Malpractice Info<input type="text" name="malpractice"></label>
-        <label>CME<input type="text" name="cme"></label>
-        <label>Time Off<input type="text" name="time_off"></label>
-        <label>Expected Hours<input type="text" name="hours"></label>
-        <label>On Call Requirements<input type="text" name="on_call"></label>
-        <label>Contact Info (Name + Email)<input type="text" name="contact"></label>
-        <button type="submit">Submit Job</button>
-      </form>
+    <div class="submit-job-link">
+      <h3>Want to Post a Job?</h3>
+      <a href="submit.html">Submit a Job Listing</a>
     </div>
   </div>
 </body>
 </html>
+
